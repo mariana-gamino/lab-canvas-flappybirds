@@ -15,7 +15,7 @@ function drawPipes() {
 }
 
 function checkCollitions(){
-  if(flappy.y < 0 + flappy.height || flappy.y > canvas.height - flappy.height) gameOver()
+  if(flappy.y < 0 || flappy.y > canvas.height - flappy.height) gameOver()
   pipes.forEach(pipe => {
     if (flappy.isTouching(pipe)) gameOver()
   })
